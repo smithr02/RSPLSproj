@@ -20,7 +20,24 @@ namespace RPSLS
 
             choice = Gestures[userInput - 1];  //this is where when the user puts in a number it is subtracted by 1 because the line starts from 0 and not 1. 
 
+            
 
+
+            bool isvalid = false; 
+            while (isvalid)
+            {
+                Console.WriteLine("Enter a number between 1-5 for the gestures");
+                int number = int.Parse(Console.ReadLine());
+                if (number <= 0 || number > 4)
+                {
+                    
+                    Console.WriteLine("That is not a valid choice, please try again");
+                }
+                else
+                {
+                    isvalid = false;
+                }
+            }
         }
     }
 }
